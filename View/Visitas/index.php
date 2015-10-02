@@ -22,8 +22,9 @@
     <input name="Enviar" type="submit" id="Enviar" />
   </p>
 </form>
-<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=ver">Ver los comentarios de los visitantes anteriores.</a></p>
-<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=agregar">Ver los comentarios de los visitantes anteriores.</a></p>
-<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=eliminar">Ver los comentarios de los visitantes anteriores.</a></p>
+<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=ver">Ver</a></p>
+<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=agregar">Agregar</a></p>
+<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=eliminar">Eliminar</a></p>
+<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=editar">Editar</a></p>
 </body>
 </html>

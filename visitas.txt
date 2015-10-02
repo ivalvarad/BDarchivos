@@ -1,10 +1,20 @@
 2
-////
-1
+/
+0
 Nombre	
 Apellidos	
-Teléfono de la Casa	Dirección de la Casa	
+Teléfono de la Casa	
+Dirección de la Casa	
 Teléfono del Trabajo	
 Dirección del Trabajo	
 Correo Electrónico
-//
+/
+1
+Nombre	
+Apellidos	
+Teléfono de la Casa	
+Dirección de la Casa	
+Teléfono del Trabajo	
+Dirección del Trabajo	
+Correo Electrónico
+/

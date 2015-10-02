@@ -32,9 +32,7 @@ function add($post)
 	}
 }
 
-
 function delete($post){
-	$post = 0;
     $in = fopen('visitas.txt', 'a+');
 	$inStr = fread($in,filesize("visitas.txt"));
 	fclose($in);
@@ -42,9 +40,9 @@ function delete($post){
 	for($i=1; $i<sizeof($inArr); ++$i){
 	    $str = $inArr[$i]; //un contacto
 		$entryArr = explode("\n",$str);
-		printf($entryArr[1].".");
-		if(strcmp(trim($entryArr[1]), "0")==0){
-			$inArr[$i] = ""; //poner datos entrantes
+		//printf($entryArr[1].".");
+		if(strcmp(trim($entryArr[1]), strval($post))==0){
+			unset($inArr[$i]);
 		}
 	}
 	$newCont = implode("//",$inArr);
@@ -53,36 +51,24 @@ function delete($post){
 	fclose($in);
 }
 
-/*
-function delete($post){
-	$post = 0;
+function edit($post){
     $in = fopen('visitas.txt', 'a+');
 	$inStr = fread($in,filesize("visitas.txt"));
-	$index = strpos($inStr, "\n");
-	$cont = substr($inStr,0,$index);
-	$cont = trim($cont);
-	//printf($cont.".");
-	//$inStr = substr($inStr,1);
-	$inStr = substr($inStr,$index-1);
-	$inArr = explode("/",$inStr);
 	fclose($in);
-	foreach($inArr as $entry) {
-		$entryArr = explode("\n",$entry);
-		//if($entry[0]===$post){
-			//$entry = "";
-			//printf($entry."</br>");
-		//}
-	}
-	$arrayCont = array($cont);
-	$inArr = array_merge($arrayCont,$inArr);
-	foreach($inArr as $entry) {
-		printf($entry."</br>");
+	$inArr = explode("/",$inStr);
+	for($i=1; $i<sizeof($inArr); ++$i){
+	    $str = $inArr[$i]; //un contacto
+		$entryArr = explode("\n",$str);
+		//printf($entryArr[1].".");
+		if(strcmp(trim($entryArr[1]), strval($post))==0){
+			$inArr[$i] = $datos; //poner datos entrantes
+		}
 	}
 	$newCont = implode("//",$inArr);
 	$in = fopen('visitas.txt', 'w');
 	fwrite($in, $newCont);
 	fclose($in);
-}*/
+}
 
 function liste() {
 	$file = fopen('visitas.txt', 'r');
@@ -137,7 +123,12 @@ class VisitasController extends Solsoft\ekeke\Controller {
 	
 	function eliminar()
 	{
-		delete(1);
+		delete(0);
+	}
+	
+	function editar()
+	{
+		edit(0);
 	}
 }
 

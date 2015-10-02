@@ -1,7 +1,10 @@
-dd
-hhg
-ccc
-gg
-hgjg
-gg
-nhhhh
+2
+////
+1
+Nombre	
+Apellidos	
+Teléfono de la Casa	Dirección de la Casa	
+Teléfono del Trabajo	
+Dirección del Trabajo	
+Correo Electrónico
+//

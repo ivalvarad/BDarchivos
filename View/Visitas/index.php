@@ -26,5 +26,6 @@
 <p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=agregar">Agregar</a></p>
 <p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=eliminar">Eliminar</a></p>
 <p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=editar">Editar</a></p>
+<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=grabar">Grabar</a></p>
 </body>
 </html>

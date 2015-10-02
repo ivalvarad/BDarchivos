@@ -32,6 +32,22 @@ function add($post)
 	}
 }
 
+function parfile(){
+	$datos = array();
+	$in = fopen('visitas.txt', 'a+');
+	$inStr = fread($in,filesize("visitas.txt"));
+	fclose($in);
+	$inArr = explode("/",$inStr);
+	for($i=1; $i<sizeof($inArr); ++$i){
+		$str = $inArr[$i]; //un contacto
+		$entryArr = explode("\n",$str);
+		array_push($datos,$entryArr);
+	}
+	unset($datos[sizeof($datos)-1]);
+	return $datos;
+}
+
+
 function delete($post){
     $in = fopen('visitas.txt', 'a+');
 	$inStr = fread($in,filesize("visitas.txt"));
@@ -98,6 +114,7 @@ class VisitasController extends Solsoft\ekeke\Controller {
 	{
 		$visitas = liste();
 		$this->view->assign('visitas', $visitas);
+		$this->view->assign('datos', parfile());
 	}
 
 	function grabar()
@@ -105,6 +122,7 @@ class VisitasController extends Solsoft\ekeke\Controller {
 		if (grabe($_POST))
 		{
 			$this->view->assign('mensaje', 'Su comentario ha sido recibido satisfactoriamente.');
+			//$this->view->assign('datos', parfile());
 		}
 		else
 		{

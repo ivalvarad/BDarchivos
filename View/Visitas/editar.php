@@ -3,7 +3,7 @@
 		<title>Libreta de direcciones</title>
 	</head>
 	<body>
-		<h1>Agregar nuevo contacto.</h1>
+		<h1>Editar un contacto.</h1>
 		<form name="visita" id="visita" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 		  <input name="action" type="hidden" value="agregar" />
 			  <p>Nombre:

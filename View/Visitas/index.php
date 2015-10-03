@@ -2,33 +2,51 @@
 header ('Content-type: text/html; charset=utf-8');
 ?>
 <html>
-<head>
-	<title>Libro de visitas, bienvenido</title>
-</head>
-<body>
-<h1>Libro de Visitas</h1>
-<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=ver">Ver los comentarios de los visitantes anteriores.</a></p>
-<form name="visita" id="visita" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-  <input name="action" type="hidden" value="grabar" />
-  <p>Este formulario le permite enviar comentarios sobre este sitio.</p>
-  <p>Nombre:
-    <input name="nombre" type="text" id="nombre" size="51" maxlength="50" />
-  </p>
-  <p>Correo electr&oacute;nico:
-    <input name="correo" type="text" id="correo" size="51" maxlength="50" />
-  </p>
 
-  <p>Comentario:
-    <textarea name="comentario" cols="50" rows="3" wrap="VIRTUAL" id="comentario"></textarea>
-  </p>
-  <p>
-    <input name="Enviar" type="submit" id="Enviar" />
-  </p>
-</form>
-<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=ver">Ver</a></p>
-<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=agregar">Agregar</a></p>
-<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=eliminar">Eliminar</a></p>
-<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=editar">Editar</a></p>
-<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=grabar">Grabar</a></p>
-</body>
+	<head>
+		<title>Libreta de direcciones</title>
+		<style>
+			table, th, td, tr {
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+	    <h1>Bienvenido a su libreta de direcciones</h1>
+	    <table>
+			<tr>
+				<th><?php echo 'Nombre'; ?>&nbsp;</th>
+				<th><?php echo 'Apellido'; ?>&nbsp;</th>
+				<th><?php echo 'TelCasa';?>&nbsp;</th>
+				<th><?php echo 'DirCasa';?>&nbsp;</th>
+				<th><?php echo 'TelTrabajo';?>&nbsp;</th>
+				<th><?php echo 'DirTrabajo';?>&nbsp;</th>
+				<th><?php echo 'Correo';?>&nbsp;</th>
+				<th><?php echo 'Actions';?></th>
+			</tr>
+			<?php echo "</br></br>"; ?>
+			<?php
+			foreach ($datos as $dato){
+			?>
+			
+			<tr class="desp">
+				<td><?php echo $dato[2]; ?>&nbsp;</td>
+				<td><?php echo $dato[3]; ?>&nbsp;</td>
+				<td><?php echo $dato[4]; ?>&nbsp;</td>
+				<td><?php echo $dato[5]; ?>&nbsp;</td>
+				<td><?php echo $dato[6]; ?>&nbsp;</td>
+				<td><?php echo $dato[7]; ?>&nbsp;</td>
+				<td><?php echo $dato[8]; ?>&nbsp;</td>
+				<td>
+					<a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=editar">Editar</a>
+					<a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=eliminar">Eliminar</a>
+				</td>
+			</tr>
+		<?php
+		}
+		?>
+		</table>
+		<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=agregar">Agregar una nueva entrada.</a></p>
+	</body>
 </html>
+>>>>>>> 2d89d3bbbdee9295f76d991015b00325707afdd2

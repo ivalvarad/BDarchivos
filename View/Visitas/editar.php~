@@ -6,11 +6,12 @@ header ('Content-type: text/html; charset=utf-8');
 		<title>Libreta de direcciones</title>
 	</head>
 	<body>
+<<<<<<< HEAD
 		<h1>Editar un contacto.</h1>
 		<?php echo $_POST['idUser']; ?>
 		<?php echo $_POST['idCorreo']; ?>
 		<form name="visita" id="visita" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>?action=editarS"  >
-		  
+		  <input type="hidden" name="idUser" id="idUser" value="<?php echo $_POST['idUser']; ?>" > 
 			  <p>Nombre:
 			<input name="nombre" type="text" id="nombre" size="51" maxlength="50" 
 			value="<?php echo $_POST['idNom'] ?>"/>
@@ -43,3 +44,21 @@ header ('Content-type: text/html; charset=utf-8');
 		</form>
 	</body>
 </html>
+=======
+		<h1>Editar contacto</h1>
+		<form name="visita" id="visita" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+		   <input name="action" type="hidden" value="agregar" />
+			  <p>Nombre:<input name="nombre" type="text" id="nombre" size="51" maxlength="50" /></p>
+			  <p>Apellido:<input name="apellido" type="text" id="apellido" size="51" maxlength="50" /></p>
+			  <p>Tel&eacute;fono de casa:<input name="telcasa" type="text" id="telcasa" size="51" maxlength="10" /></p>
+			  <p>Direcci&oacute;n de la casa:<textarea name="dircasa" cols="50" rows="3" wrap="VIRTUAL" id="dircasa"></textarea></p>
+			  <p>Tel&eacute;fono del trabajo:<input name="teltrabajo" type="text" id="teltrabajo" size="51" maxlength="10" /></p>
+			  <p>Direcci&oacute;n del trabajo:<textarea name="dirtrabajo" cols="50" rows="3" wrap="VIRTUAL" id="dirtrabajo"></textarea></p>
+			  <p>Correo electr&oacute;nico:<input name="correo" type="text" id="correo" size="51" maxlength="50" /></p>
+			  <p><input name="Enviar" type="submit" id="Enviar" value="Enviar" /></p>
+		</form>
+	</body>
+</html>
+
+
+>>>>>>> 2d89d3bbbdee9295f76d991015b00325707afdd2

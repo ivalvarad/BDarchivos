@@ -6,6 +6,7 @@ header ('Content-type: text/html; charset=utf-8');
 		<title>Libreta de direcciones</title>
 	</head>
 	<body>
+
 		<h1>Editar un contacto.</h1>
 		<?php echo $_POST['idUser']; ?>
 		<?php echo $_POST['idCorreo']; ?>
@@ -43,3 +44,4 @@ header ('Content-type: text/html; charset=utf-8');
 		</form>
 	</body>
 </html>
+

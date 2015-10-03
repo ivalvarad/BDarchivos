@@ -17,11 +17,24 @@ function grabe($post)
 	}
 }
 
-function add($post)
-{
+//primero lee el contador de la línea inicial del archivo
+//ingresa ese contador seguido de todas las entradas que ya se ingresan
+//aumenta el contador y lo escribe en la primera línea del archivo
+//el archivo de BD inicial debe contener dos líneas, el contador en la primera y delimitador en la segunda.
+/*
+   0
+   /
+*/
+function add($post){
 	$file = fopen('visitas.txt', 'a+');
-	if( fputs($file, $post['nombre']."\n".$post['apellido']."\n".$post['telcasa']."\n".$post['dircasa']."\n".$post['teltrabajo']."\n".$post['dirtrabajo']."\n".$post['correo']."\n") > 0)
+	$fileStr = fread($file,filesize("visitas.txt"));
+	$cont = trim(strtok($fileStr, "\n"));
+	if( fputs($file, PHP_EOL.$cont.PHP_EOL.$post['nombre'].PHP_EOL.$post['apellido'].PHP_EOL.$post['telcasa'].PHP_EOL.$post['dircasa'].PHP_EOL.$post['teltrabajo'].PHP_EOL.$post['dirtrabajo'].PHP_EOL.$post['correo'].PHP_EOL."/") > 0)
 	{
+	    $file_data = ($cont+1);
+		$fileStr = file_get_contents("visitas.txt");
+		$file_data .= substr($fileStr, stripos($fileStr,PHP_EOL));
+		file_put_contents('visitas.txt', $file_data);
 		fclose($file);
 		return true;
 	}
@@ -121,6 +134,7 @@ function liste() {
 class VisitasController extends Solsoft\ekeke\Controller {
 	function index()
 	{
+	$this->view->assign('datos', parfile());
 	}
 
 	function ver()

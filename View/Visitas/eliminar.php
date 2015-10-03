@@ -6,8 +6,9 @@ header ('Content-type: text/html; charset=utf-8');
 		<title>Libreta de direcciones</title>
 	</head>
 	<body>
-		<h1>Libro de Visitas</h1>
-		<p><?php echo $mensaje; ?><br />
-		 
+
+		<h1>La entrada ha sido eliminada exitosamente.</h1>
+		<button type="button"><a href="index.php">Continuar</a></button>
+
 	</body>
 </html>

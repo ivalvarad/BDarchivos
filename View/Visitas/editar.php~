@@ -10,7 +10,7 @@ header ('Content-type: text/html; charset=utf-8');
 		<?php echo $_POST['idUser']; ?>
 		<?php echo $_POST['idCorreo']; ?>
 		<form name="visita" id="visita" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>?action=editarS"  >
-		  <input type="hidden" name="idUser" id="idUser" value="<?php echo $_POST['idUser']; ?>" > 
+		  
 			  <p>Nombre:
 			<input name="nombre" type="text" id="nombre" size="51" maxlength="50" 
 			value="<?php echo $_POST['idNom'] ?>"/>

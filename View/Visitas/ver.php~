@@ -40,7 +40,7 @@ header ('Content-type: text/html; charset=utf-8');
 				<input type="hidden" name="idTelCasa" value="<?php echo $dato[4] ?>" > 
 				<input type="hidden" name="idDirCasa" value="<?php echo $dato[5] ?>" > 
 				<input type="hidden" name="idTelTrab" value="<?php echo $dato[6] ?>" >
-				<input type="hidden" name="idDirTrab" value="<?php echo $dato[7] ?>" > 
+				<input type="hidden" name="iDirTrab" value="<?php echo $dato[7] ?>" > 
 				<input type="hidden" name="idCorreo" value="<?php echo $dato[8] ?>" >  
 				<input type="submit" value="Editar">
 				    

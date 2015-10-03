@@ -24,7 +24,7 @@ function add($post){
 	$file = fopen('visitas.txt', 'a+');
 	$fileStr = fread($file,filesize("visitas.txt"));
 	$cont = trim(strtok($fileStr, "\n"));
-	if( fputs($file, PHP_EOL."/".PHP_EOL.$cont.PHP_EOL.$post['nombre'].PHP_EOL.$post['apellido'].PHP_EOL.$post['telcasa'].PHP_EOL.$post['dircasa'].PHP_EOL.$post['teltrabajo'].PHP_EOL.$post['dirtrabajo'].PHP_EOL.$post['correo']) > 0)
+	if( fputs($file, PHP_EOL.$cont.PHP_EOL.$post['nombre'].PHP_EOL.$post['apellido'].PHP_EOL.$post['telcasa'].PHP_EOL.$post['dircasa'].PHP_EOL.$post['teltrabajo'].PHP_EOL.$post['dirtrabajo'].PHP_EOL.$post['correo'].PHP_EOL."/") > 0)
 	{
 	    $file_data = ($cont+1);
 		$fileStr = file_get_contents("visitas.txt");

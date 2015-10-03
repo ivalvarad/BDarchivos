@@ -116,6 +116,7 @@ function liste() {
 class VisitasController extends Solsoft\ekeke\Controller {
 	function index()
 	{
+	$this->view->assign('datos', parfile());
 	}
 
 	function ver()

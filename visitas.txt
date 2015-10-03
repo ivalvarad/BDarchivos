@@ -1,35 +1,19 @@
-2
+5
 /
-0
-Nombre	
-Apellidos	
-Teléfono de la Casa	
-Dirección de la Casa	
-Teléfono del Trabajo	
-Dirección del Trabajo	
-Correo Electrónico
+3
+a
+a
+a
+a
+a
+a
+a
 /
-1
-Nombre	
-Apellidos	
-Teléfono de la Casa	
-Dirección de la Casa	
-Teléfono del Trabajo	
-Dirección del Trabajo	
-Correo Electrónico
-/
-
-
-03-10-2015
-
-
-
-03-10-2015
-
-
-
-03-10-2015
-
-
-
-03-10-2015
+4
+a
+a
+a
+a
+a
+a
+a

@@ -20,6 +20,11 @@ function grabe($post)
 //primero lee el contador de la línea inicial del archivo
 //ingresa ese contador seguido de todas las entradas que ya se ingresan
 //aumenta el contador y lo escribe en la primera línea del archivo
+//el archivo de BD inicial debe contener dos líneas, el contador en la primera y delimitador en la segunda.
+/*
+   0
+   /
+*/
 function add($post){
 	$file = fopen('visitas.txt', 'a+');
 	$fileStr = fread($file,filesize("visitas.txt"));

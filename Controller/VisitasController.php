@@ -74,7 +74,7 @@ function delete($post){
 			unset($inArr[$i]);
 		}
 	}
-	$newCont = implode("//",$inArr);
+	$newCont = implode("/",$inArr);
 	$in = fopen('visitas.txt', 'w');
 	fwrite($in, $newCont);
 	fclose($in);

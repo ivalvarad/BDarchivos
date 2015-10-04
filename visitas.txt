@@ -1,14 +1,5 @@
 3
-//
-0
-jialin
-Apellidos
-Teléfono de la Casa
-Dirección de la Casa
-Teléfono del Trabajo
-Dirección del Trabajo
-Correo Electrónico
-//
+/
 1
 Nombre
 Apellidos
@@ -17,7 +8,7 @@ Dirección de la Casa
 Teléfono del Trabajo
 Dirección del Trabajo
 Correo Electrónico
-////
+/
 
 
 

@@ -1,4 +1,4 @@
-3
+﻿3
 /
 1
 Nombre
@@ -9,9 +9,3 @@ Teléfono del Trabajo
 Dirección del Trabajo
 Correo Electrónico
 /
-
-
-
-
-
-

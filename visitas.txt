@@ -1,22 +1,26 @@
-2
-<<<<<<< HEAD
+3
+//
+0
+jialin
+Apellidos
+Tel茅fono de la Casa
+Direcci贸n de la Casa
+Tel茅fono del Trabajo
+Direcci贸n del Trabajo
+Correo Electr贸nico
 //
 1
 Nombre
 Apellidos
-Tel閒ono de la Casa
-Direcci髇 de la Casa
-Tel閒ono del Trabajo
-Direcci髇 del Trabajo
-Correo Electr髇ico
-//
+Tel茅fono de la Casa
+Direcci贸n de la Casa
+Tel茅fono del Trabajo
+Direcci贸n del Trabajo
+Correo Electr贸nico
+////
 
 
 
 
 
 
-
-=======
-/
->>>>>>> 2d89d3bbbdee9295f76d991015b00325707afdd2

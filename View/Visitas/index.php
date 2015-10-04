@@ -13,6 +13,7 @@ header ('Content-type: text/html; charset=utf-8');
 	</head>
 	<body>
 	    <h1>Bienvenido a su libreta de direcciones</h1>
+		<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=agregar">Agregar una nueva entrada.</a></p>
 	    <table>
 			<tr>
 				<th><?php echo 'Nombre'; ?>&nbsp;</th>
@@ -62,7 +63,6 @@ header ('Content-type: text/html; charset=utf-8');
 		?>
 		</table>
 		<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=agregar">Agregar una nueva entrada.</a></p>
-		<p><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=ver">Ver</a></p>
 	</body>
 </html>
 

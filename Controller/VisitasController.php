@@ -85,13 +85,11 @@ function edit($post){
 	$inStr = fread($in,filesize("visitas.txt"));
 	fclose($in);
 	$inArr = explode("/",$inStr);
-	for($i=1; $i<sizeof($inArr); ++$i){
+	for($i=1; $i<sizeof($inArr)-1; ++$i){ //sizeof($inArr)-1 xq en la entrada ultima siempre hay algo vacio
 	    $str = $inArr[$i]; //un contacto
 		$entryArr = explode("\n",$str);
-		printf($entryArr[1].".");
-		if(strcmp(trim($entryArr[1]), strval($post['idUser']))==0){
-		
-			//$inArr[$i] = "HOLASDF"; //poner datos entrantes
+		if(strcmp(trim($entryArr[1]), trim(strval($post['idUser'])))==0){
+		//if(strcmp(trim($entryArr[1]), strval($post['idUser']))==0){
 			$entryArr[2] = $_POST['nombre'];
 			$entryArr[3] = $_POST['apellido'];
 			$entryArr[4] = $_POST['telcasa'];
@@ -100,10 +98,8 @@ function edit($post){
 			$entryArr[7] = $_POST['dirtrabajo'];
 			$entryArr[8] = $_POST['correo'];
 			$cambio = implode("\n",$entryArr);
+			printf($cambio);
 			$inArr[$i] = $cambio;
-			
-			
-		
 		}
 	}
 	$newCont = implode("/",$inArr);
@@ -176,15 +172,14 @@ class VisitasController extends Solsoft\ekeke\Controller {
 	function editar()
 	{
 		
-		
-
-		
 	}	
 	function editarS()
 	{
 		
-		edit($_POST);
-		$this->view->assign('mensaje', 'Fue editado exitosamente');
+		if (count($_POST)) {
+			edit($_POST);
+			$this->view->assign('mensaje', 'Fue editado exitosamente');
+		}
 		
 	}
 }

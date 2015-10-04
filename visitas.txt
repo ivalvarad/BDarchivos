@@ -1,5 +1,14 @@
 3
 /
+0
+jialin
+Apellidos
+Teléfono de la Casa
+Dirección de la Casa
+Teléfono del Trabajo
+Dirección del Trabajo
+Correo Electrónico
+/
 1
 Nombre
 Apellidos
@@ -9,9 +18,10 @@ Teléfono del Trabajo
 Dirección del Trabajo
 Correo Electrónico
 /
-
-
-
-
-
-
+nombre
+kalam
+apellido1
+3234
+34
+34
+df

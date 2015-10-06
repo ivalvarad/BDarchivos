@@ -70,7 +70,7 @@ function delete($post){
 	    $str = $inArr[$i]; //un contacto
 		$entryArr = explode("\n",$str);
 		//printf($entryArr[1].".");
-		if(strcmp(trim($entryArr[1]), strval($post))==0){
+		if(strcmp(trim($entryArr[1]), trim(strval($post)))==0){
 			unset($inArr[$i]);
 		}
 	}
@@ -98,7 +98,7 @@ function edit($post){
 			$entryArr[7] = $_POST['dirtrabajo'];
 			$entryArr[8] = $_POST['correo'];
 			$cambio = implode("\n",$entryArr);
-			printf($cambio);
+			//printf($cambio);
 			$inArr[$i] = $cambio;
 		}
 	}
@@ -164,7 +164,7 @@ class VisitasController extends Solsoft\ekeke\Controller {
 	
 	function eliminar()
 	{
-		echo $_POST['idUser'];
+		//echo $_POST['idUser'];
 		delete($_POST['idUser']);
 		$this->view->assign('mensaje', 'Fue borrado exitosamente');
 	}
